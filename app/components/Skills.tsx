@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { ReactElement } from "react";
 import {
   SiHtml5,
   SiCss,
@@ -12,30 +12,30 @@ import {
   SiNodedotjs,
   SiNextdotjs,
   SiTailwindcss,
-  } from "react-icons/si";
+} from "react-icons/si";
+import { FaSearch } from "react-icons/fa";
 import styles from "./Skills.module.css";
 
-import { FaSearch } from "react-icons/fa";
-
+// ✅ Fixed: use ReactElement instead of JSX.Element
 type SkillLevel = {
   level: string;
-  skills: { name: string; icon: JSX.Element }[];
+  skills: { name: string; icon: ReactElement }[];
   color: string; // keep Tailwind color or convert to CSS
 };
 
 const skillLevels: SkillLevel[] = [
   {
     level: "Advanced",
-    color: "#28ffdb", 
+    color: "#28ffdb",
     skills: [
       { name: "HTML", icon: <SiHtml5 /> },
       { name: "CSS", icon: <SiCss /> },
-     { name: "SEO", icon: <FaSearch /> } ,
+      { name: "SEO", icon: <FaSearch /> },
     ],
   },
   {
     level: "Intermediate",
-    color: "#9efded", 
+    color: "#9efded",
     skills: [
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "Bootstrap", icon: <SiBootstrap /> },
@@ -45,7 +45,7 @@ const skillLevels: SkillLevel[] = [
   },
   {
     level: "Developing",
-    color: "#d4f8f2", 
+    color: "#d4f8f2",
     skills: [
       { name: "React", icon: <SiReact /> },
       { name: "Node.js", icon: <SiNodedotjs /> },
@@ -64,10 +64,7 @@ export default function Skills() {
         {skillLevels.map((level, idx) => (
           <div key={idx} className={styles.levelBox}>
             {/* Level Heading */}
-            <h3
-              className={styles.levelHeading}
-              style={{ color: level.color }}
-            >
+            <h3 className={styles.levelHeading} style={{ color: level.color }}>
               {level.level}
             </h3>
 
