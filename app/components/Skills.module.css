@@ -1,0 +1,70 @@
+/* Skills.module.css */
+
+.skillsSection {
+  padding: 4rem 1.5rem; /* py-16 px-6 */
+  max-width: 80rem; /* max-w-5xl */
+  margin: 2.5rem auto 0 auto; /* mt-10 + mx-auto */
+  text-align: center;
+}
+
+.sectionHeading {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  margin-bottom: 3rem; /* mb-12 */
+  color: #ffffff;
+  letter-spacing: 0.05em; /* tracking-wide */
+}
+
+.levelContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem; /* space-y-12 */
+}
+
+.levelBox {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .levelBox {
+    width: 66.666667%; /* md:w-2/3 */
+  }
+}
+
+.levelHeading {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Skill icons container */
+.skillsIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* gap-8 */
+}
+
+/* Individual skill box */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+.skillIcon {
+  font-size: 3.75rem; /* text-6xl */
+  color: #ffffff;
+}
+
+.skillName {
+  margin-top: 0.5rem; /* mt-2 */
+  font-weight: 500;
+  color: #ffffff;
+}

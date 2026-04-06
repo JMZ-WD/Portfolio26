@@ -1,0 +1,232 @@
+/* Projects Section */
+.projects-section {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  padding: 5rem 1.5rem;
+  box-sizing:border-box;
+  margin-top: -2.5rem;
+}
+
+.section-container {
+  max-width:112em;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing:border-box;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.sub-title {
+  font-size: 1.25rem;
+  color: #28ffdb;
+  margin-bottom: 1.5rem;
+}
+
+/* Slider */
+.slider-wrapper {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: #3b82f6;
+  color: #000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-left { left: 1.25rem; }
+.arrow-right { right: 1.25rem; }
+
+.overflow-hidden { overflow: hidden; }
+.slider-inner { display: flex; }
+.slider-item {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.slider-item-inactive { transform: scale(0.9); opacity: 0.5; }
+.slider-item-active { transform: scale(1); opacity: 1; }
+
+/* Project Card */
+.project-card {
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  box-sizing:border-box;
+}
+
+.project-title { font-size: 1.25rem; font-weight: 700; color: #fff; }
+.project-description { color: #e5e7eb; font-size: 0.875rem; }
+.project-link { color: #28ffdb; font-weight: 500; text-decoration: none; }
+.project-link:hover { text-decoration: underline; }
+.see-all-link {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.see-all-link:hover { background-color: #fff; color: #000; }
+/* Device wrapper base */
+.device-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  overflow: hidden;
+}
+
+/* Project image */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.25rem;
+}
+
+/* ----------------- Laptop Frame ----------------- */
+/* ----------------- Laptop Frame ----------------- */
+.laptop-frame {
+  width: 100%;
+  width: 750px; /* max width for large screens */
+  aspect-ratio: 16 / 10; /* keeps monitor shape */
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 3px 8px rgb(70, 70, 70);
+  background: #000;
+  position: relative;
+  flex-shrink: 0; /* prevents shrinking in flex row */
+
+   border: 8px solid #8a8a8a;
+    border-bottom: 24px solid #8a8a8a;
+}
+
+
+
+/* ----------------- Mobile Frame ----------------- */
+.mobile-frame {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 9 / 16; /* portrait shape */
+  border-radius: 2rem;
+  border: 8px solid #aaa;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  background: #000;
+  position: relative;
+  flex-shrink: 0;
+}
+
+
+/* Mobile camera notch */
+.mobile-camera {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 8px;
+  background: #222;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.2);
+}
+
+/* ----------------- General Project Card ----------------- */
+.project-card {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+/* Titles and links */
+.project-title { font-size: 1.25rem; font-weight: 700; color: #fff; }
+.project-description { color: #e5e7eb; font-size: 0.875rem; }
+.project-link { color: #28ffdb; font-weight: 500; text-decoration: none; }
+.project-link:hover { text-decoration: underline; }
+.see-all-link {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.see-all-link:hover { background-color: #fff; color: #000; }
+
+/* ----------------- Carousel overflow fix ----------------- */
+.sliderWrapper {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden; /* prevent horizontal scroll */
+  margin: 0 auto;
+}
+.sliderInner {
+  display: flex;
+  gap: 2rem; /* space between items */
+  transition: transform 0.3s ease;
+}
+.sliderItem {
+  flex: 0 0 auto; /* prevents stretching */
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,108 @@
+/* Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 1rem; /* top-4 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+
+  background-color: rgba(13, 42, 69, 0.2); /* bg-blue-950/20 */
+  backdrop-filter: blur(10px); /* backdrop-blur-md */
+  color: #fdfdfd; /* text-gray-400 */
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  border-radius: 1rem; /* rounded-2xl */
+  border: 1px solid rgba(209, 213, 219, 0.5); /* border-gray-300/50 */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: bold;
+  color: #28ffdb; /* text-orange-200 */
+  cursor: pointer;
+  margin-right: 3rem; /* mr-12 */
+}
+
+/* Desktop Menu */
+.menu {
+  display: none;
+  gap: 1.5rem; /* space-x-6 */
+  font-size: 1rem; /* text-base */
+  font-weight: 500;
+}
+
+.menuItem {
+  cursor: pointer;
+  transition: color 0.3s;
+  list-style: none;
+}
+
+.menuItem:hover {
+  color: #28ffdb; /* hover:text-accent */
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* space-y-1 */
+  cursor: pointer;
+  background-color:rgba(255, 0, 0, 0);
+  border:none;
+}
+
+.bar {
+  width: 1.5rem; /* w-6 */
+  height: 0.125rem; /* h-0.5 */
+  background-color: #fafafa; /* bg-gray-400 */
+  transition: all 0.3s;
+}
+
+/* Mobile Menu Overlay */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.75rem; /* mt-3 */
+  width: 12rem; /* w-48 */
+background-color: rgba(0, 0, 0, 0.932); /* bg-blue-950/20 */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.671); /* shadow-lg */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0; /* py-4 */
+  gap: 1.5rem; /* space-y-3 */
+  text-align: center;
+}
+
+.mobileMenuItem {
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
+
+ letter-spacing: 2px;
+ font-size:1.2em;
+}
+
+.mobileMenuItem:hover {
+  color: #28ffdb; /* hover:text-orange-300 */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

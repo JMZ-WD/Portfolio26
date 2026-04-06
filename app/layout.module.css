@@ -1,0 +1,12 @@
+
+/* layout.module.css */
+
+.rootBody {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  margin: 0;
+  padding: 0;
+}

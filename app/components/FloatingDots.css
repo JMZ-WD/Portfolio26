@@ -1,0 +1,14 @@
+.dots-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.dot {
+  position: absolute;
+  background: rgb(44, 221, 252);
+  border-radius: 50%;
+  filter: blur(3px);
+  box-shadow: 0 0 10px rgba(42, 241, 241, 0.6);
+}

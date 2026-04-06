@@ -1,0 +1,65 @@
+/* About.module.css */
+
+.aboutSection {
+  padding: 4rem 1rem; /* py-16 px-4 */
+  font-family: var(--font-manrope), sans-serif;
+  margin-top: 0;
+}
+
+.container {
+  max-width: 64rem; /* max-w-4xl */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* gap-6 */
+}
+
+.heading {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff; /* default */
+  letter-spacing: 0.05em; /* tracking-wide */
+}
+
+.subHeading {
+  font-size: 1.125rem; /* text-lg */
+  text-align: center;
+  color: #28ffdb; /* text-orange-200 */
+  margin-top: -0.5rem; /* -mt-2 */
+}
+
+.textContainer {
+  margin-top: 1.5rem; /* mt-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 */
+  text-align: center;
+}
+
+.textContainer p {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem; /* leading-relaxed */
+  color: #ffffff;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .heading {
+    color: var(--secondary, #ededed);
+  }
+  .subHeading {
+    color: #d1d5db; /* gray-300 */
+  }
+  .textContainer p {
+    color: #d1d5db;
+  }
+}
+
+/* Responsive text alignment */
+@media (min-width: 768px) {
+  .textContainer {
+    text-align: left;
+  }
+}

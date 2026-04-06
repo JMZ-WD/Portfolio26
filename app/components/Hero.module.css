@@ -1,0 +1,121 @@
+/* Hero.module.css */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  font-family: var(--font-manrope), sans-serif;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12.5rem; /* approximate for mt-50 */
+}
+
+/* Fade-in for greeting */
+.fadeIn {
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.greeting {
+  font-size: 1.25rem; /* text-xl */
+  color: #f3f4f6; /* text-gray-100 */
+  margin-bottom: 0.5rem;
+}
+
+.heroName {
+  font-size: 3rem; /* text-5xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  transition: opacity 2s;
+}
+
+.heroTitle {
+  display: inline-block;
+  background-color: #28ffdb; /* bg-orange-200 */
+  border-radius: 1rem; /* rounded-2xl */
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  transition: opacity 2s;
+}
+
+.heroTitleText {
+  font-size: .8rem; /* text-2xl */
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+}
+
+.heroDescription {
+  font-size: 1.125rem; /* text-lg */
+  max-width: 45rem; /* max-w-xl */
+  margin-bottom: 2rem;
+  color: #f3f4f6;
+  transition: opacity 2s;
+}
+
+/* Buttons container */
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  transition: opacity 2s;
+}
+
+.primaryButton {
+  background-color: #28ffdb;
+  color: #000;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.primaryButton:hover {
+  transform: scale(1.05);
+}
+
+.secondaryButton {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.secondaryButton:hover {
+  background-color: #fff;
+  color: #000;
+}
