@@ -40,17 +40,18 @@ function ProjectCard({ project }: { project: Project }) {
   const [isMobile, setIsMobile] = useState(false);
 
 
+useEffect(() => {
+  if (!emblaApi) return;
 
-  useEffect(() => {
-  if (typeof window === "undefined") return;
+  const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+  emblaApi.on("select", onSelect);
 
-  const handleResize = () => setIsMobile(window.innerWidth < 768);
-
-  handleResize();
-  window.addEventListener("resize", handleResize);
-
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+  return () => {
+    if (emblaApi) {
+      emblaApi.off("select", onSelect);
+    }
+  };
+}, [emblaApi]);
 
   const imageSrc = isMobile && project.mobileImage ? project.mobileImage : project.image;
 
