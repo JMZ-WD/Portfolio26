@@ -196,7 +196,7 @@
 
 /* Titles and links */
 .project-title { font-size: 1.25rem; font-weight: 700; color: #fff; }
-.project-description { color: #e5e7eb; font-size: 0.875rem; }
+.project-description { color: #e5e7eb; font-size: 1rem; }
 .project-link { color: #28ffdb; font-weight: 500; text-decoration: none; }
 .project-link:hover { text-decoration: underline; }
 .see-all-link {

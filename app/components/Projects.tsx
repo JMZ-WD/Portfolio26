@@ -18,22 +18,22 @@ type Project = {
 // 2️⃣ Define the projects array at **module scope**
 const projects: Project[] = [
   {
-    title: "E-Commerce Soccer Store",
-    description: "Full-stack college project built with PHP and MySQL...",
+    title: "E-Commerce Store",
+    description: "Developed a dynamic online football store as college project using PHP and MySQL, featuring a fully functional shopping cart, secure checkout, and order confirmation pages. Built an admin panel to manage products, stock, and users. Designed a minimalist, responsive layout to showcase products effectively across all devices.",
     image: "/images/ciaol.jpg",
     mobileImage: "/images/ciaomob1.png",
     link: "#",
   },
   {
     title: "Cinema Website",
-    description: "Full-stack cinema booking system using PHP and MySQL...",
+    description: "Developed a dynamic cinema website as college project using PHP and MySQL, featuring session management for different age groups and admin roles. Built a fully functional admin panel to manage cinema listings and users, with the ability to add, edit, or delete entries. Implemented an online ticket booking system generating QR codes for tickets. Designed reusable PHP database templates to streamline content management from the admin panel.",
     image: "/images/cinema1.png",
     mobileImage: "/images/cinemamob1.png",
     link: "#",
   },
   {
-    title: "Portfolio Website",
-    description: "Modern portfolio built with Next.js and animations.",
+    title: "Business Website",
+    description: "Designed a sleek, fully responsive site for Edinburgh Poster Distribution to showcase the company’s work, events, and custom services. Implemented effective SEO strategies, achieving #1 rankings on Google and maximizing online visibility.",
     image: "/projects/portfolio.jpg",
     link: "#",
   },
