@@ -34,7 +34,8 @@ const projects: Project[] = [
   {
     title: "Business Website",
     description: "Designed a sleek, fully responsive site for Edinburgh Poster Distribution to showcase the company’s work, events, and custom services. Implemented effective SEO strategies, achieving #1 rankings on Google and maximizing online visibility.",
-    image: "/projects/portfolio.jpg",
+    image: "/images/poster.png",
+    mobileImage: "/images/postermob.png",
     link: "#",
   },
 ];
@@ -76,7 +77,7 @@ function ProjectCard({ project }: { project: Project }) {
   )}
 </p>
       <a href={project.link} className="project-link">View Website →</a>
-      <Link href="/Projects" className="see-all-link">See All Projects</Link>
+    
     </div>
   );
 }
