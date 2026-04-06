@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import "./ProjectsSlider.css";
 
+// 1️⃣ Define Project type
 type Project = {
   title: string;
   description: string;
@@ -14,6 +15,7 @@ type Project = {
   link: string;
 };
 
+// 2️⃣ Define the projects array at **module scope**
 const projects: Project[] = [
   {
     title: "E-Commerce Soccer Store",
@@ -36,48 +38,35 @@ const projects: Project[] = [
     link: "#",
   },
 ];
+
+// 3️⃣ ProjectCard component (can stay here)
 function ProjectCard({ project }: { project: Project }) {
   const [isMobile, setIsMobile] = useState(false);
 
-
-useEffect(() => {
-  if (!emblaApi) return;
-
-  const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
-  emblaApi.on("select", onSelect);
-
-  return () => {
-    if (emblaApi) {
-      emblaApi.off("select", onSelect);
-    }
-  };
-}, [emblaApi]);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const imageSrc = isMobile && project.mobileImage ? project.mobileImage : project.image;
 
   return (
-  <div className="project-card">
-  <h2 className="project-title">{project.title}</h2>
-  <div className={`device-wrapper ${isMobile ? "mobile-frame" : "laptop-frame"}`}>
-    {isMobile && <div className="mobile-camera"></div>}
-    <img src={imageSrc} alt={project.title} className="project-image" />
-    
-   
-  </div>
-
-
-
+    <div className="project-card">
+      <h2 className="project-title">{project.title}</h2>
+      <div className={`device-wrapper ${isMobile ? "mobile-frame" : "laptop-frame"}`}>
+        {isMobile && <div className="mobile-camera"></div>}
+        <img src={imageSrc} alt={project.title} className="project-image" />
+      </div>
       <p className="project-description">{project.description}</p>
-      <a href={project.link} className="project-link">
-        Read more →
-      </a>
-      <Link href="/Projects" className="see-all-link">
-        See All Projects
-      </Link>
+      <a href={project.link} className="project-link">Read more →</a>
+      <Link href="/Projects" className="see-all-link">See All Projects</Link>
     </div>
   );
 }
 
+// 4️⃣ ProjectsSlider component
 export default function ProjectsSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "center", loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -92,7 +81,9 @@ export default function ProjectsSlider() {
     emblaApi.on("select", onSelect);
     onSelect();
 
-    return () => emblaApi.off("select", onSelect);
+    return () => {
+      if (emblaApi) emblaApi.off("select", onSelect);
+    };
   }, [emblaApi]);
 
   return (
@@ -104,21 +95,13 @@ export default function ProjectsSlider() {
         </div>
 
         <div className="slider-wrapper">
-    <button
-  onClick={() => emblaApi?.scrollPrev()}
-  disabled={!emblaApi}
-  className="arrow-button arrow-left"
->
-  <ChevronLeftIcon className="w-6 h-6" />
-</button>
+          <button onClick={scrollPrev} disabled={!emblaApi} className="arrow-button arrow-left">
+            <ChevronLeftIcon className="w-6 h-6" />
+          </button>
+          <button onClick={scrollNext} disabled={!emblaApi} className="arrow-button arrow-right">
+            <ChevronRightIcon className="w-6 h-6" />
+          </button>
 
-<button
-  onClick={() => emblaApi?.scrollNext()}
-  disabled={!emblaApi}
-  className="arrow-button arrow-right"
->
-  <ChevronRightIcon className="w-6 h-6" />
-</button>
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="slider-inner">
               {projects.map((project, index) => {
