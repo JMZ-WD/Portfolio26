@@ -39,9 +39,10 @@ const projects: Project[] = [
   },
 ];
 
-// 3️⃣ ProjectCard component (can stay here)
+// 3️⃣ ProjectCard component with Read More
 function ProjectCard({ project }: { project: Project }) {
   const [isMobile, setIsMobile] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -52,6 +53,9 @@ function ProjectCard({ project }: { project: Project }) {
 
   const imageSrc = isMobile && project.mobileImage ? project.mobileImage : project.image;
 
+  const toggleExpanded = () => setExpanded(!expanded);
+  const previewText = project.description.slice(0, 70); // show first 70 chars
+
   return (
     <div className="project-card">
       <h2 className="project-title">{project.title}</h2>
@@ -59,7 +63,18 @@ function ProjectCard({ project }: { project: Project }) {
         {isMobile && <div className="mobile-camera"></div>}
         <img src={imageSrc} alt={project.title} className="project-image" />
       </div>
-      <p className="project-description">{project.description}</p>
+
+    <p className="project-description">
+  {expanded ? project.description : `${previewText}...`}
+  {project.description.length > 70 && (
+    <span
+      onClick={toggleExpanded}
+      style={{ fontWeight: "bold", cursor: "pointer", marginLeft: "4px" }}
+    >
+      {expanded ? "Minimise" : "Read More"}
+    </span>
+  )}
+</p>
       <a href={project.link} className="project-link">View Website →</a>
       <Link href="/Projects" className="see-all-link">See All Projects</Link>
     </div>
