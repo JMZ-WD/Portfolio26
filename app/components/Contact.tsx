@@ -58,7 +58,7 @@ export default function Contact() {
 
       <div className={styles.socialLinks}>
         <a
-          href="mailto:jmz-webdesigns@outlook.com"
+          href="mailto:jmz-webdesigns@hotmail.com"
           className={styles.socialLink}
           target="_blank"
           rel="noopener noreferrer"

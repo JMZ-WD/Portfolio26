@@ -119,3 +119,14 @@
   background-color: #fff;
   color: #000;
 }
+
+@media (max-width: 600px) {
+  .heroContent {
+    margin-top: 0px;
+  }
+
+  .heroDescription {
+margin-top:80px;
+}
+
+}

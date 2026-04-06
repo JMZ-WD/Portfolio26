@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
 
         <p className={styles.heroDescription}>
-          I create sleek, responsive web experiences that combine creativity and
+          Creating sleek, responsive web experiences that combine creativity and
           functionality.
         </p>
 
