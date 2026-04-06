@@ -39,12 +39,18 @@ const projects: Project[] = [
 function ProjectCard({ project }: { project: Project }) {
   const [isMobile, setIsMobile] = useState(false);
 
+
+
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  if (typeof window === "undefined") return;
+
+  const handleResize = () => setIsMobile(window.innerWidth < 768);
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   const imageSrc = isMobile && project.mobileImage ? project.mobileImage : project.image;
 
