@@ -60,7 +60,7 @@ function ProjectCard({ project }: { project: Project }) {
         <img src={imageSrc} alt={project.title} className="project-image" />
       </div>
       <p className="project-description">{project.description}</p>
-      <a href={project.link} className="project-link">Read more →</a>
+      <a href={project.link} className="project-link">View Website →</a>
       <Link href="/Projects" className="see-all-link">See All Projects</Link>
     </div>
   );

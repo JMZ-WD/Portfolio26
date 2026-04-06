@@ -27,29 +27,29 @@ const skillLevels: SkillLevel[] = [
   {
     level: "Advanced",
     color: "#28ffdb",
-    skills: [
-      { name: "HTML", icon: <SiHtml5 /> },
-      { name: "CSS", icon: <SiCss /> },
+    skills: [ 
+        { name: "CSS", icon: <SiCss /> },
+      { name: "HTML", icon: <SiHtml5 /> },   
       { name: "SEO", icon: <FaSearch /> },
     ],
   },
   {
     level: "Intermediate",
     color: "#9efded",
-    skills: [
-      { name: "JavaScript", icon: <SiJavascript /> },
+    skills: [     
       { name: "Bootstrap", icon: <SiBootstrap /> },
-      { name: "PHP", icon: <SiPhp /> },
-      { name: "MySQL", icon: <SiMysql /> },
+       { name: "JavaScript", icon: <SiJavascript /> },
+          { name: "MySQL", icon: <SiMysql /> },
+      { name: "PHP", icon: <SiPhp /> },   
     ],
   },
   {
     level: "Developing",
     color: "#d4f8f2",
     skills: [
-      { name: "React", icon: <SiReact /> },
-      { name: "Node.js", icon: <SiNodedotjs /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "React", icon: <SiReact /> },
       { name: "Tailwind", icon: <SiTailwindcss /> },
     ],
   },

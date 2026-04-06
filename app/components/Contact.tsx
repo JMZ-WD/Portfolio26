@@ -58,7 +58,7 @@ export default function Contact() {
 
       <div className={styles.socialLinks}>
         <a
-          href="mailto:youremail@example.com"
+          href="mailto:jmz-webdesigns@outlook.com"
           className={styles.socialLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -66,7 +66,7 @@ export default function Contact() {
           Email
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/JMZ-WD"
           className={styles.socialLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Contact() {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/james-kelly-530b5b202/"
           className={styles.socialLink}
           target="_blank"
           rel="noopener noreferrer"
