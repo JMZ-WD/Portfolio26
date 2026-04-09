@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       {/* Logo */}
-      <div className={styles.logo}>JMZ-WD</div>
+      <div className={styles.logo}><a href="#">JMZ-WD</a></div>
 
       {/* Desktop Menu */}
       <ul className={styles.menu}>
